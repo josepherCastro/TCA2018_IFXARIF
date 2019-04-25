@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controller.CadastrarMateriaisControl"
+            prefHeight="400.0" prefWidth="600.0" alignment="BASELINE_CENTER" fx:id="cena">
+    <HBox>
+        <Label text="Nome do material: "/>
+        <TextField fx:id="tfNome"/>
+    </HBox>
+    <HBox>
+        <Label text="Fornecedor: "/>
+        <ComboBox fx:id="cbFornecedor"/>
+    </HBox>
+    <HBox>
+        <Label text="Escolha a unidade de medida: "/>
+        <ComboBox fx:id="cbUniMedida"/>
+    </HBox>
+    <HBox>
+        <Label text="Quantidade Minima pra Estoque: "/>
+        <TextField fx:id="tfQuantMinima"/>
+    </HBox>
+    <HBox>
+        <Label text="Quantidade Total: "/>
+        <TextField fx:id="tfQuantTotal"/>
+    </HBox>
+    <CheckBox text="Material Requer Devolução" fx:id="chbDevolutivo"/>
+
+    <Button text="Salvar" onAction="#btSalvar"/>
+</VBox>

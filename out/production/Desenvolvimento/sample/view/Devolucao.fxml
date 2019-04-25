@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controller.DevolucaoControl"
+            prefHeight="100.0" prefWidth="300.0" fx:id="cena">
+    <center>
+        <TableView fx:id="tvRetirados" onMouseClicked="#click" layoutX="14.0" layoutY="14.0" prefHeight="358.0" prefWidth="439.0">
+            <columns>
+                <TableColumn text="Nº Retirada" fx:id="tcIdRetirada"/>
+                <TableColumn text="Funcionario" fx:id="tcFuncionario"/>
+                <TableColumn text="Material Retirado" fx:id="tcMaterial"/>
+                <TableColumn text="Quantidade" fx:id="tcQuantidade"/>
+                <TableColumn text="Data e Hora" fx:id="tcDataHora"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

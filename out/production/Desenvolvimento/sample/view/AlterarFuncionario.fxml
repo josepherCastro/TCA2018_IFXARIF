@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controller.AlterarFuncionarioControl"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <HBox alignment="CENTER_RIGHT">
+            <Label text="Insira matricula:"/><TextField fx:id="tfBuscarMatricula"/><Button text="Buscar" onAction="#btBuscar"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="TOP_LEFT" >
+            <HBox spacing="5">
+                <Label text="Alterar Cadastro de Funcionarios"/>
+            </HBox>
+            <Label text="Nº Matricula:"/>
+            <TextField fx:id="tfMatricula"/>
+            <Label text="Nome:"/>
+            <TextField fx:id="tfNome"/>
+            <Label text="Senha:"/>
+            <TextField fx:id="tfSenha"/>
+            <Label text="Setor:"/>
+            <TextField fx:id="tfSetor"/>
+            <HBox>
+                <Label text="Privilegio: "/><Text text="" fx:id="tPrivilegio"/>
+            </HBox>
+            <HBox>
+                <Label text="Novo Privilegio: "/><ComboBox fx:id="cbPrivilegio"/>
+            </HBox>
+            <HBox alignment="CENTER" spacing="20">
+                <Button text="Salvar" onAction="#salvar"/>
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

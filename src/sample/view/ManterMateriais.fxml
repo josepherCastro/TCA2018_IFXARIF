@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--<?import com.sun.javafx.scene.control.skin.ContextMenuContent.MenuBox?>-->
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controller.ManterMateriaisControl"
+            prefHeight="400.0" prefWidth="600.0" fx:id="cena">
+    <top>
+        <MenuBar>
+            <Menu text="Manter Fornecedor">
+                <MenuItem text="Cadastrar Fornecedor" onAction="#btCadastrarFornecedor"/>
+            </Menu>
+            <Menu text="Manter Material">
+                <MenuItem text="Cadastrar Material" onAction="#btCadastrarMaterial"/>
+                <MenuItem text="Registrar Devolucao" onAction="#btDevolucao"/>
+            </Menu>
+            <Menu text="Relatorio">
+                <MenuItem text="Gerar Relatorio" onAction="#btRelatorio"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <VBox>
+            <TableView fx:id="tvMateriaisCadastrados" onMouseClicked="#click" layoutX="14.0" layoutY="14.0" prefHeight="358.0" prefWidth="439.0">
+                <columns>
+                    <TableColumn text="Nome" fx:id="tcNome"/>
+                    <TableColumn text="Uni. Medida" fx:id="tcUniMedida"/>
+                    <TableColumn text="Quantidade Total" fx:id="tcQuantidade"/>
+                    <TableColumn text="Item Devolutivo" fx:id="tcdevolutivo"/>
+                    <TableColumn text="Fornecedor" fx:id="tcFornecedor"/>
+                </columns>
+            </TableView>
+
+            <TableView fx:id="tvMateriaisSelecionados" onMouseClicked="#click2" layoutX="14.0" layoutY="14.0" prefHeight="358.0" prefWidth="439.0">
+                <columns>
+                    <TableColumn text="Nome" fx:id="tcNomeSelect"/>
+                    <TableColumn text="Uni. Medida" fx:id="tcUniMedidaSelect"/>
+                    <TableColumn text="Quantidade Total" fx:id="tcQuantidadeSelect"/>
+                    <TableColumn text="Item Devolutivo" fx:id="tcdevolutivoSelect"/>
+                    <TableColumn text="Fornecedor" fx:id="tcFornecedorSelect"/>
+                </columns>
+            </TableView>
+
+        </VBox>
+    </center>
+    <bottom>
+        <HBox spacing="25">
+            <HBox><Label text=" Matricula para Retirada: "/><TextField fx:id="tfMatricula"/></HBox>
+            <HBox alignment="CENTER_RIGHT"> <Button text="Retirar Materiais" onAction="#btRetira"/> <Button text="Encerrar Atividades" onAction="#btLogoff"/> </HBox>
+        </HBox>
+    </bottom>
+</BorderPane>

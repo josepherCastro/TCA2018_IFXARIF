@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controller.ManterFuncionarioControl"
+            prefHeight="275.0" prefWidth="525.0" fx:id="cena">
+    <top>
+        <MenuBar>
+            <Menu text="Manter Funcionarios">
+                <MenuItem text="Cadastrar Funcionario" onAction="#mCadastrarFunc"/>
+                <MenuItem text="Alterar" onAction="#mAlterar"/>
+                <MenuItem text="Excluir" onAction="#mExcluir"/>
+            </Menu>
+        </MenuBar>
+        <!--<Button text="Cadastrar Funcionario" onAction="#mCadastrarFunc"/>-->
+    </top>
+    <center>
+        <TableView fx:id="tvFuncCadastrados" layoutX="14.0" layoutY="14.0" prefHeight="358.0" prefWidth="439.0">
+            <columns>
+                <TableColumn text="Nº Matricula" fx:id="tcMatricula"/>
+                <TableColumn text="Nome" fx:id="tcNome"/>
+                <!--<TableColumn text="Senha" fx:id="tcSenha"/>-->
+                <TableColumn text="Setor" fx:id="tcSetor"/>
+                <TableColumn text="Privilegio" fx:id="tcPrivilegio"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT">
+            <Button text="Encerrar Atividades" onAction="#btLogoff"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

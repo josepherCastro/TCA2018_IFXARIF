@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controller.LoginControl"
+            prefHeight="400.0" prefWidth="600.0" fx:id="cena">
+
+    <center>
+        <GridPane alignment="CENTER">
+            <Label text="Login.." GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label text="Nº Matricula:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField text="20180003" fx:id="tfMatricula" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <Label text="Senha:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <PasswordField text="antonio2018" fx:id="tfSenha" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <Button text="Logar" onAction="#btLogar" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        </GridPane>
+    </center>
+</BorderPane>
